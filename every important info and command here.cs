@@ -91,9 +91,12 @@ ShopNGUIController.ProvideShopItemOnStarterPackBoguht(ShopNGUIController.Categor
 WeaponManager.AddExclusiveWeaponToWeaponStructures(WeaponManager.SocialGunWN); // adds the weapon
 
 
-// and last but not least, to make a run once only command, for this i just use the training completed thing, even if it might glitch while using developerConsole
+// to make a run once only command, for this i just use the training completed thing, even if it might glitch while using developerConsole
 if (Storager.getInt(Defs.TrainingCompleted_4_4_Sett, false) == 0)
 {
     // code here
     Storager.setInt(Storager.getInt(Defs.TrainingCompleted_4_4_Sett, 1, false));
 }
+
+
+// to add removed weapons from the shop search for WeaponManager.InitializeRemoved150615Weapons() and just delete every weapon prefab inside that method
