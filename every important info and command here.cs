@@ -103,13 +103,6 @@ if (Storager.getInt(Defs.TrainingCompleted_4_4_Sett, false) == 0)
 
 // at about version 5.4-6.0 connectgui became editable via dnspy. at 10.3.0 it became un-editable by this method. the way to find the method with the list of maps in each gamemode you can either search in "all of the above" for "ConnectGUI" or "ConnectNGUI" or search in "numbers/string" for a map scene name such as "day_d" or "dust"
 // compare the map strings to the maps in each gamemode to find out which lists go where. to find out the strings for the scenes of the map, you can use assetripper to rip the scenes and preview them in unity.
-
-
-// this code will make a button appear as long as you have a gameobject with the button code class component connected to it.
-if (GUI.Button(new Rect(26f, 280f, 100f, 100f), "button" ) // the "if" statement will not only create the button but also attach a method to when you press it. the float numbers are for the position and size of the button on the screen. while the string is the text on the button. for example this button sets the amount of coins you have to 1.
-    {
-	    Storager.setInt("Coins", 1, false);
-    } // the button code will work on almost any unity game so give it a try on some other games if you like!
     
     
     // to change the fps cap of pixel gun, place this code in an active class such as "uiroot.awake" or "appsmenu.awake"
