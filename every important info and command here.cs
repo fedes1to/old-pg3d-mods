@@ -5,6 +5,8 @@ PhotonNetwork.PhotonServerSettings.HostType = ServerSettings.HostingOption.Photo
 // ----------------------------------------------------------------- //
 PhotonNetwork.PhotonServerSettings.UseCloud("photonappidhere", 0); // do everything that was used before but simpler
 // ----------------------------------------------------------------- //
+Resources.Load<ServerSettings>("PhotonServerSettings").UseCloud("APPIDHERE", 0); // use this if you have a version below 8.0.0
+// ----------------------------------------------------------------- //
 PhotonNetwork.PhotonServerSettings.PreferredRegion = CloudRegionCode.us; // use this if you want centralized servers (ping isn't that bad)
 
 
