@@ -438,6 +438,15 @@ internal sealed class DeveloperConsoleController : MonoBehaviour
 	// Token: 0x0600544C RID: 21580 RVA: 0x00032871 File Offset: 0x00030A71
 	private void HandleGemsInputSubmit(UIInput input)
 	{
+	if (input == null || string.IsNullOrEmpty(input.value))
+		{
+			return;
+		}
+		int num;
+		if (int.TryParse(input.value, out num))
+		{
+			Storager.setInt("GemsCurrency", num, false);
+		}
 		bool isActiveAndEnabled = input.isActiveAndEnabled;
 	}
 
